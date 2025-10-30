@@ -11,11 +11,11 @@ const TaskDetail = () => {
       <h2>TaskDetail</h2>
       
       {task ? (
-      <>
-            <h3>{task.title}</h3>
-            <p> {task.description}</p>
-      </>) :(
-       <p>Task Does not exist</p>)
+            <>
+                  <h3>{task.title}</h3>
+                  <p> {task.description}</p>
+            </>) :
+                  (<p>Task Does not exist</p>)
       }
       <Link to ={"/"}>Back to Main </Link>
       </div>

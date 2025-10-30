@@ -18,7 +18,7 @@ const TaskList = () => {
             transition:" all 0.3s ease"}}>
 
             {tasks.map((task => (
-                  <li key={task.id}>
+                  <li key={task.id} style={{textAlign:"left", listStyle:"check"}}>
                         <Link to={`/task/${task.id}`}>
                         {task.title}
                         </Link>
