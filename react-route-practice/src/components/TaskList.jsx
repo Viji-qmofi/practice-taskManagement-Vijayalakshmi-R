@@ -6,9 +6,9 @@ const TaskList = () => {
   return (
     <div>
       <h2>TaskList</h2>
-      <ul style={{
+      <ol style={{
             background: "white",
-            listStyle:"none",
+            
             margin: "8px auto",
             padding: "12px",
             width: "300px",
@@ -18,13 +18,13 @@ const TaskList = () => {
             transition:" all 0.3s ease"}}>
 
             {tasks.map((task => (
-                  <li key={task.id} style={{textAlign:"left", listStyle:"check"}}>
-                        <Link to={`/task/${task.id}`}>
-                        {task.title}
+                  <li key={task.id}>
+                        <Link to={`/task/${task.id}`}> {/* Link navigates to /task/${task.id}*/}
+                        {task.title} {/* Displays tasks list with title */}
                         </Link>
                   </li>
             )))}
-      </ul>
+      </ol>
       </div>
   )
 }
